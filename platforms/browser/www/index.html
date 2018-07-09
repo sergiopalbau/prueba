@@ -9,6 +9,23 @@
     <meta name="theme-color" content="#2196f3">
 
      <script src="ext/signature/lib/modernizr.js"></script>
+
+     
+      <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+      <script>
+        // Initialize Firebase
+        var config = {
+          apiKey: "AIzaSyAYdYuZir-qAVvWHsVdw3ri5CrOoFniJQ4",
+          authDomain: "signin-25095.firebaseapp.com",
+          databaseURL: "https://signin-25095.firebaseio.com",
+          projectId: "signin-25095",
+          storageBucket: "signin-25095.appspot.com",
+          messagingSenderId: "229931503652"
+        };
+        firebase.initializeApp(config);
+      </script>
+
+
     <!-- Your app title -->
     <title>SigIn Beta</title>
     <!-- Path to Framework7 Library CSS -->
@@ -87,6 +104,25 @@
                     </div>
                   </div>
                 </li>
+
+                <li class="item-content item-input">
+                        
+                        <div class="item-inner">
+                          <div class="item-title item-label">Instalacion</div>
+                          <div class="item-input-wrap">
+                            <select placeholder="Elija una opcion..." id= "instalacion" name="instalacion">
+                              <option value="">Elija una opcion ...</option>
+                              <option value="Oficina">Oficina</option>
+                              <option value="Taller">Taller</option>
+                              <option value="dpTrobajo">Dp.Trobajo</option>
+                              <option value="dpSanAndres">Dp.SanAndres</option>
+                              <option value="dpVillabalter">Dp.Villabalter</option>
+                              <option value="dpPinilla">Dp.Pinilla</option>
+                              <option value="Todas">Todas</option>
+                            </select>
+                          </div>
+                        </div>
+                 </li>
                 <div class="block block-strong">
                 <li class="item-content item-input">
                   <!-- <div class="item-media"></div> -->
@@ -104,29 +140,47 @@
                       <li class="item-content item-input">
                         <!-- <div class="item-media"></div> -->
                         <div class="item-inner">
-                          <div class="item-title item-label">Hora Inicio</div>
+                          <div class="item-title item-label">Hora </div>
                           <div class="item-input-wrap">
-                            <input type="time" name="hinicio" id="hinicio" required validate>
+                            <input type="time" name="hora" id="hora" required validate>
                             <span class="input-clear-button"></span>
                           </div>
                         </div>
                       </li>
                     </div>
-                    <div class="col">
-                      <li class="item-content item-input">
-                        <!-- <div class="item-media"></div> -->
+                  <div class="col">
+                        <li class="item-content item-input">
+                        
                         <div class="item-inner">
-                         
-                          <div class="item-title item-label">Hora Fin</div>
+                          <div class="item-title item-label">TIPO</div>
                           <div class="item-input-wrap">
-                            <input type="time" name="hfin" id="hfin" required validate>
-                            <span class="input-clear-button"></span>
+                            <select placeholder="Please choose..." id="tipo" name= "tipo">
+                              <option value="Entrada">Entrada</option>
+                              <option value="Salida">Salida</option>
+                            </select>
                           </div>
                         </div>
                       </li>
+                      </div>
                     </div>
-                  </div>
-                </div>
+                  </div>  
+
+
+
+
+
+                  <li class="">
+                  <!-- <div class="item-media"></div> -->
+                 
+                   
+                    <!-- <div class="item-title "></div> -->
+                     
+                      <input type="hidden" name="firma" id="firma"  disabled="">
+                      <!-- <span class="input-clear-button"></span> -->
+                
+                </li>
+
+               
               </div> <!-- block -->
              </ul>
             </form>
